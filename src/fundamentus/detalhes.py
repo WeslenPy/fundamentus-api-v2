@@ -229,7 +229,7 @@ def get_detalhes_raw(papel='WEGE3'):
             time.sleep(.500) # 500 ms
 
     ## parse
-    tables_html = pd.read_html(content.text, decimal=",", thousands='.')
+    tables_html = pd.read_html(content.text, decimal=".",converters=None)
 
     return tables_html
 
